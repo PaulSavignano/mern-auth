@@ -24,7 +24,7 @@ exports.signup = function(req, res, next) {
     if (err) { return next(err); }
     // If user email exists return error
     if (existingUser) {
-      return res.status(422).send({ error: 'Email is in use' })
+      return res.status(422).send({ error: 'Email is in use' });
     }
     // If user email does not exist, create record
     const user = new User({
